@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-
+<html>
+<title>Thermostat</title>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Thermostat</title>
     <script src="src/Thermostat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body>
-    
     <div class="display">
     <h1 id="temperature">20</h1>
     <h1 id="enery usage">medium</h1>
@@ -20,10 +19,14 @@
     <p>
       <button id="temperature-up">up</button>
       <button id="temperature-down">down</button>
-      <button id="power-saving">power-saving</button>
       <button id="temperature-reset">reset</button>
     </p>
   </div>
 
+  <div class="switch">
+    <button id="power-saving">power saving</button>
+  </div>
+
+</div>
   </body>
 </html>
