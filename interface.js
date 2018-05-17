@@ -42,4 +42,24 @@ $(document).ready(function() {
     });
   });
 
+  // displayWeather('London');
+  //
+  // $('#select-city').submit(function(event) {
+  //   event.preventDefault();
+  //   var city = $('#current-city').val();
+  //   displayWeather(city);
+  // });
+  //
+  // function displayWeather(city) {
+  //     var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+  //     var token = '&APPID=6ad17e7426ddf72d0a8756bcec7b1981';
+  //     var units = '&units=metric';
+  //     $.get(url + token + units, function(data) {
+  //       $('.temperature').text(data.main.temp);
+  //     });
+  //     $.get(url + token + units, function(data) {
+  //       $('.weather').text(data["weather"][0]["description"]);
+  //     });
+  //   };
+
 });
