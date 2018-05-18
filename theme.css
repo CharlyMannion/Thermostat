@@ -6,11 +6,11 @@ body {
     position: fixed; /* or absolute */
     left: 30%;
     width: 300px;
-    border: 25px solid black;
+    border: 25px solid gold;
     padding: 25px;
     margin: 25px;
-    color: white;
-    background-color: rgb(0, 0, 100);
+    color: rgb(255, 179, 102);
+    background-color: rgb(204, 255, 255);
     text-align: center;
 }
 
@@ -19,11 +19,23 @@ h1{
 }
 
 .low-usage {
-  color: green;
+  color: rgb(133, 224, 133);
 }
 .medium-usage {
   color: black;
 }
 .high-usage {
-  color: red;
+  color: rgb(255, 153, 128);
+}
+
+[id = 'power-saving'] {
+  color: blue
+}
+
+.on {
+  color: blue
+}
+
+.off {
+  color: rgb(255, 179, 102);
 }

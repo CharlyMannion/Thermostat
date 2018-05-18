@@ -1,16 +1,25 @@
 function UpdateUi(thermostat){
   $('#temperature').text(thermostat.temperature);
   $('#energy-usage').text(thermostat.energyUsage());
+
   var usage = thermostat.energyUsage();
-  var cssClass;
+  var cssUsage;
   if(usage === 'low-usage') {
-    cssClass = 'low-usage';
+    cssUsage = 'low-usage';
   } else if (usage === 'medium-usage') {
-    cssClass = 'medium-usage';
+    cssUsage = 'medium-usage';
   } else {
-    cssClass = 'high-usage';
-}
-$('#temperature').attr('class', cssClass);
+    cssUsage = 'high-usage';
+  }
+  var powerSaving = thermostat.isPowerSaving;
+  var cssPowerSaving;
+  if(powerSaving === true) {
+    cssPowerSaving = 'on';
+  } else {
+    cssPowerSaving = 'off';
+  }
+$('#temperature').attr('class', cssUsage);
+$('#power-saving').attr('class', cssPowerSaving);
 }
 
 
