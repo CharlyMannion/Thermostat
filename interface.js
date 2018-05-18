@@ -5,7 +5,7 @@ function UpdateUi(thermostat){
 
   var usage = thermostat.energyUsage();
   var cssUsage;
-  
+
   if(usage === 'low-usage') {
     cssUsage = 'low-usage';
   } else if (usage === 'medium-usage') {
@@ -56,9 +56,9 @@ $(document).ready(function() {
     var output
     thermostat.togglePowerSaving();
     if(thermostat.isPowerSaving === true) {
-      output = "ECO"
+      output = "ECO :)"
     }else {
-      output = "Fuck the Planet"
+      output = "Murder the Bees"
     }
     $('#power-saving').text(output);
     UpdateUi(thermostat);
