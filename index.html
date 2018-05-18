@@ -2,7 +2,7 @@
 <html>
 <title>Thermostat</title>
 <html lang="en">
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="theme.css">
   <head>
     <meta charset="utf-8">
     <script src="src/Thermostat.js"></script>
@@ -10,22 +10,20 @@
     <script src="interface.js"></script>
   </head>
 
+<div>
   <body>
-    <div class="display">
-    <h1 id="temperature"></h1>
-    <h1 id="energy-usage">nil</h1>
-    <h1 id="power-saving">true</h1>
-  </div>
+    <class="display">
+    <h1 id="temperature">temp</h1>
+    <h2 id="energy-usage">nil</h2>
+    <h3 id="power-saving">true</h3>
 
-  <div class="controls">
+  <class="controls">
     <p>
       <button id="temperature-up">up</button>
       <button id="temperature-down">down</button>
       <button id="temperature-reset">reset</button>
     </p>
-  </div>
 
-  <div>
     <section>
       <select id="current-city">
         <option value="london">London</option>
@@ -36,8 +34,8 @@
         <option value="newcastle">Newcastle</option>
         <option value="mexico city">Mexico City</option>
       </select>
-      <h1>Outside temperature: <span class="temperature"></span>°c</h1>
-      <h2>Weather Forecast: <span class="weather"></span></h2>
+      <h4>Outside temperature: <span class="temperature"></span>°c</h4>
+      <h4>Weather Forecast: <span class="weather"></span></h4>
     </section>
   </div>
 

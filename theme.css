@@ -1,0 +1,23 @@
+body {
+  background-color: white;
+  }
+
+  div {
+    position: fixed; /* or absolute */
+    left: 30%;
+    width: 300px;
+    border: 25px solid black;
+    padding: 25px;
+    margin: 25px;
+    color: white;
+    background-color: rgb(0, 0, 84);
+    text-align: center;
+}
+
+h1{
+  color: red;
+}
+
+[id="energy-usage"] {
+  color: green;
+}
