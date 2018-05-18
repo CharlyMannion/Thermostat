@@ -1,3 +1,19 @@
+function UpdateUi(thermostat){
+  $('#temperature').text(thermostat.temperature);
+  $('#energy-usage').text(thermostat.energyUsage());
+  var usage = thermostat.energyUsage();
+  var cssClass;
+  if(usage === 'low-usage') {
+    cssClass = 'low-usage';
+  } else if (usage === 'medium-usage') {
+    cssClass = 'medium-usage';
+  } else {
+    cssClass = 'high-usage';
+}
+$('#temperature').attr('class', cssClass);
+}
+
+
 $(document).ready(function() {
   var thermostat = new Thermostat();
 
@@ -7,25 +23,24 @@ $(document).ready(function() {
 
   $('#temperature-up').on('click', function(){
     thermostat.increaseTemperature();
-    $('#energy-usage').text(thermostat.energyUsage());
-    $('#temperature').text(thermostat.temperature);
+    UpdateUi(thermostat);
   });
 
   $('#temperature-down').on('click', function(){
     thermostat.decreaseTemperature();
-    $('#energy-usage').text(thermostat.energyUsage());
-    $('#temperature').text(thermostat.temperature);
+    UpdateUi(thermostat);
   });
 
   $('#temperature-reset').on('click', function(){
     $('#energy-usage').text(thermostat.energyUsage());
     thermostat.resetTemperature();
-    $('#temperature').text(thermostat.temperature);
+    UpdateUi(thermostat);
   });
 
   $('#power-saving').on('click', function(){
     thermostat.togglePowerSaving();
     $('#power-saving').text(thermostat.isPowerSaving);
+    UpdateUi(thermostat);
   });
 
   $('#current-city').change(function() {
@@ -35,5 +50,6 @@ $(document).ready(function() {
       $('.temperature').text(data.main.temp);
     });
   });
+
 
 });

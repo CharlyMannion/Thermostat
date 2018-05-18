@@ -10,14 +10,20 @@ body {
     padding: 25px;
     margin: 25px;
     color: white;
-    background-color: rgb(0, 0, 84);
+    background-color: rgb(0, 0, 100);
     text-align: center;
 }
 
 h1{
-  color: red;
+  color: black;
 }
 
-[id="energy-usage"] {
+.low-usage {
   color: green;
+}
+.medium-usage {
+  color: black;
+}
+.high-usage {
+  color: red;
 }
