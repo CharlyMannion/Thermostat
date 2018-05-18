@@ -47,8 +47,14 @@ $(document).ready(function() {
   });
 
   $('#power-saving').on('click', function(){
+    var output
     thermostat.togglePowerSaving();
-    $('#power-saving').text(thermostat.isPowerSaving);
+    if(thermostat.isPowerSaving === true) {
+      output = "ECO"
+    }else {
+      output = "Fuck the Planet"
+    }
+    $('#power-saving').text(output);
     UpdateUi(thermostat);
   });
 

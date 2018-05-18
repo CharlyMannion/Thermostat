@@ -33,9 +33,11 @@ h1{
 }
 
 .on {
-  color: blue
+  color: blue;
+
 }
 
 .off {
-  color: rgb(255, 179, 102);
+  color: red;
+
 }
