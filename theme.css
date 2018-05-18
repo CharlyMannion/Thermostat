@@ -41,3 +41,9 @@ h1{
   color: red;
 
 }
+
+.controls {
+  margin-top: 50px;
+  padding: 50px 0 0 5px;
+  width: 345px;
+}
